@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href=".">
+  <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+  <link rel="stylesheet" href="./Css/register.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register RentEase</title>
+</head>
+
+
+<body>
+  <!-- 
+  // REGISTER -->
+
+  <div class="encabezado">
+    <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
+    <div class="opciones">
+      <div class="saludo ">
+        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
+        <div class="userHello">Hello</div>
+        <div class="userName">xxxxxxxxxxx</div>
+      </div>
+      <div class="menu">
+        <div class="opMenu">Home</div>
+        <div class="opMenu">All Flats</div>
+        <div class="opMenu">New Flat</div>
+        <div class="opMenu">Update Profile</div>
+        <div class="opMenu">Log out</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formulario">
+    <div class="formTitulo">Register</div>
+    <div class="formDiv">
+      <div class="text">Email:</div>
+      <div><input class="textArea" type="email" name="" id="email" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Password:</div>
+      <div><input class="textArea" type="password" name="" id="password" minlength="6" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Confirm Password:</div>
+      <div><input class="textArea" type="password" name="" id="pass_confirm" minlength="6" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">First Name:</div>
+      <div><input class="textArea" type="text" name="" id="firstName" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Last Name:</div>
+      <div><input class="textArea" type="text" name="" id="lastName" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Birth Date:</div>
+      <div><input class="textArea" type="date" name="" id="birthDate"></div>
+    </div>
+    <div class="formDiv">
+      <div><button id="btnRegist" class="btnRegister">REGISTER</button></div>
+      <div><button id="btnCancel" class="btnCancel">CANCEL</button></div>
+    </div>
+  </div>
+
+  <!-- Caja modal - Usuario registrado -->
+  <!-- <button class="ok" onclick="mostrarMensaje1()">Mostrar</button> -->
+  <div id="miModal1" class="modal">
+    <div class="modal-content">
+      <p>✅ Datos correctos, usuario registrado</p>
+      <button class="ok" onclick="cerrarMensaje1()">Cerrar</button>
+    </div>
+  </div>  
+
+  <!-- Caja modal - datos incompletos -->
+  <!-- <button class="ok" onclick="mostrarMensaje2()">Mostrar</button>  -->
+  <div id="miModal2" class="modal">
+    <div class="modal-content">
+      <p>❌ Datos incompletos </p>
+      <button class="ok" onclick="cerrarMensaje2()">Cerrar</button>
+    </div>
+  </div>
+
+  <script type="module" src="./src/validar-register.js"></script>
+
+</body>
+
+</html>
