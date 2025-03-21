@@ -1,0 +1,460 @@
+body {
+margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #9D3F01, #bdc3c7);
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(20vh);
+  background: linear-gradient(to right,#48037A, #9D3F01);
+  /* border: solid 2px red; */
+}
+
+.logo {
+  width: 10%;
+  height: 100%;
+  margin-left: 10px;
+  /* border: solid 2px black; */
+}
+
+.imgLogo {
+  width: 160px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.opciones {
+  width: 88%;
+  height: 60%;
+  margin-top: 3%;
+  margin-left: 1%;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  /* border: solid 2px green; */
+}
+
+.saludo {
+  width: 20%;
+  height: 50%;
+  margin-left: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  display: none;
+  /* border: solid 2px green; */
+}
+.userIcon{
+  width: 15%;
+  height: 100%;
+  /* border: solid 1px white; */
+}
+.imgUser{
+  margin-top: 7px;
+  width: auto;
+}
+.userHello {
+  width: 15%;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  /* border: solid 1px white; */
+}
+.userName{
+  width: 60%;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  /* border: solid 1px white; */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7px;
+  width: 100%;
+  height: 50%;
+  display: table;
+  display: none;
+  /* border: solid 2px brown; */
+}
+
+.opMenu {
+  width: 17%;
+  margin-left: 5%;
+  height: 80%;
+  margin-top: 1%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  /* border: solid 1px yellow; */
+}
+.opMenu:hover {
+  color: #f39c12;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  height: cal(30vh);
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: solid 1px red; */
+}
+
+.formTitulo {
+  width: 80%;
+  height: cal(8vh);
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: xx-large;
+  /* border: solid 1px black; */
+
+}
+
+.formDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: solid 1px red; */
+}
+
+.text {
+  width: 30%;
+  height: 100%;
+  margin-left: 2%;
+  font-size: large;
+  /* border: solid 1px blue; */
+}
+
+.textArea {
+  width: 140%;
+  height: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 2%;
+  text-shadow: darkgray;
+  /* border: 2px solid red; */
+}
+
+.btnRegister{
+  /* width: 25%; orig */
+  width: 120%;
+  height: calc(5vh);
+  /* margin-left: 15%; orig */
+  margin-left: 60%;
+  background: #1cb15a;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnRegister:hover {
+  background: #2ecc71;
+}
+
+.btnCancel {
+  /* width: 25%; orig */
+  width: 120%;
+  height: calc(5vh);
+  /* margin-left: 20%; orig */
+  margin-left: 120%;
+  background: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnCancel:hover {
+  background: #c0392b;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cerrar:hover {
+  background-color: #c9302c;
+}
+
+/* @media para Tablets de baja resolución
+481px a 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .encabezado {
+    display: block;
+    width: 100%;
+    height: calc(15vh);
+    background: linear-gradient(to right,#48037A, #9D3F01);
+    /* border: solid 2px red; */
+  }
+  
+  .logo {
+    width: 10%;
+    height: 100%;
+    margin-left: 10px;
+    /* border: solid 2px black; */
+  }
+
+  .imgLogo {
+    width: 120px;
+    height: 100%;
+    border-radius: 20px;
+  }
+ 
+  .formulario {
+    display: block;
+    width: 60%;
+    height: cal(50vh);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  /* border: solid 1px red; */
+}
+
+.formTitulo {
+  width: 80%;
+  height: calc(4vh);
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: x-large;
+  /* border: solid 1px black; */
+}
+
+.formDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: solid 1px red; */
+}
+
+.text {
+  width: 30%;
+  height: 80%;
+  margin-left: 2%;
+  font-size: medium;
+  /* border: solid 1px blue; */
+}
+
+.textArea {
+  width: 110%;
+  height: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 1%;
+  text-shadow: darkgray;
+  /* border: 2px solid red; */
+}
+
+.btnRegister{
+  width: 120%;
+  height: calc(5vh);
+  margin-left: 60%;
+  background: #1cb15a;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnRegister:hover {
+  background: #2ecc71;
+}
+
+.btnCancel {
+  /* width: 25%; orig */
+  width: 120%;
+  height: calc(5vh);
+  /* margin-left: 20%; orig */
+  margin-left: 120%;
+  background: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnCancel:hover {
+  background: #c0392b;
+}
+}
+
+/* @media para mayoría de teléfonos móviles (vertical)
+320px a 479px  */
+@media (min-width: 320px) and (max-width: 480px) {
+
+.encabezado {
+  display: block;
+  width: 100%;
+  height: calc(15vh);
+  background: linear-gradient(to right,#48037A, #9D3F01);
+  /* border: solid 2px red; */
+}
+
+.logo {
+  width: 10%;
+  height: 100%;
+  margin-left: 10px;
+  /* border: solid 2px black; */
+}
+
+.imgLogo {
+  width: 120px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.formulario {
+  display: block;
+  width: 65%;
+  height: calc(70vh);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+/* border: solid 1px red; */
+}
+
+.formTitulo {
+  width: 80%;
+  height: calc(3vh);
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: large;
+  /* border: solid 1px black; */
+}
+
+.formDiv {
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: solid 1px red; */
+}
+
+.text {
+  width: 70%;
+  height: 70%;
+  margin-left: 2%;
+  font-size: small;
+  /* border: solid 1px blue; */
+}
+
+.textArea {
+  width: 90%;
+  height: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 1%;
+  text-shadow: darkgray;
+  /* border: 2px solid red; */
+}
+
+.btnRegister{
+  width: 40%;
+  height: calc(5vh);
+  margin-left: 10%;
+  margin-top: 10px;
+  background: #1cb15a;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnRegister:hover {
+  background: #2ecc71;
+}
+
+.btnCancel {
+  width: 40%;
+  height: calc(5vh);
+  margin-left: 10%;
+  margin-top: 5px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btnCancel:hover {
+  background: #c0392b;
+}
+}

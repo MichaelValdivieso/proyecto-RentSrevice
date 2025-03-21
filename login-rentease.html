@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href=".">
+  <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+  <link rel="stylesheet" href="./Css/login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login RentEase</title>
+</head>
+
+<body>
+  <!-- 
+  LOGIN -->
+
+  <div class="encabezado">
+    <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
+    <div class="opciones">
+      <div class="saludo ">
+        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
+        <div class="userHello">Hello</div>
+        <div class="userName">xxxxxxxxxxx</div>
+      </div>
+      <div class="menu">
+        <div class="opMenu">Home</div>
+        <div class="opMenu">All Flats</div>
+        <div class="opMenu">New Flat</div>
+        <div class="opMenu">Update Profile</div>
+        <div class="opMenu">Log out</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formulario">
+    <div class="formTitulo">Login</div>
+    <div class="formDiv">
+      <div class="text">Email:</div>
+      <div><input class="textArea" type="email" name="" id="email" required></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Password:</div>
+      <div><input class="textArea" type="password" name="" id="password" minlength="6" required></div>
+    </div>
+    <div class="formDiv">
+      <div> <button id="btnLogin" class="btnLogin">Login</button></div>
+      <div> <button id="btnRegister" class="btnRegister">Register</button></div>
+    </div>
+  </div>
+
+  <!-- Caja modal - El correo electrónico no es válido  -->
+   <div id="miModal1" class="modal">
+      <div class="modal-content">
+      <p>❌ El correo electrónico no es válido </p>
+      <button class="ok" onclick="cerrarMensaje1()">Cerrar</button>
+      </div>
+  </div>
+
+  <!-- Caja modal - La contrasena no es válida -->
+  <div id="miModal2" class="modal">
+    <div class="modal-content">
+      <p>❌ La contrasena no es válida, debe tener por lo menos</p><br>
+      <p>Una letra mayúscula, una minúscula, un número, y un caracter especial</p>
+      <button class="ok" onclick="cerrarMensaje2()">Cerrar</button>
+    </div>
+  </div> 
+  
+  <!-- Caja modal - Parámetros de email/password no cumplen el formato  -->
+  <div id="miModal3" class="modal">
+    <div class="modal-content">
+    <p>❌ Parámetros de email/password no cumplen el formato</p>
+    <button class="ok" onclick="cerrarMensaje3()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Caja modal - Usuario no registrado, presione el botón REGISTER -->
+  <div id="miModal4" class="modal">
+    <div class="modal-content">
+    <p>❌ Usuario no registrado, presione el botón REGISTER</p>
+    <button class="ok" onclick="cerrarMensaje4()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Caja modal - Usuario está registrado - se dirigirá a la pñagina HOME -->
+  <div id="miModal5" class="modal">
+  <div class="modal-content">
+    <p>✅ Usuario consta registrado - se le dirigirá a la página HOME</p>
+    <button class="ok" onclick="cerrarMensaje5()">Cerrar</button>
+  </div>
+
+  <script type="module" src="./src/validar-login.js"></script>
+  <script type="module" src="./src/opcion-register.js"></script>
+  
+
+</body>
+
+</html>
