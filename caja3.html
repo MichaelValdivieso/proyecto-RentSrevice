@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./caja1.css">
+    <title>Caja 3 </title>
+</head>
+<body>
+    <button class="ok" onclick="mostrarMensaje()">Mostrar</button>
+<div id="miModal" class="modal">
+    <div class="modal-content">
+      <p>❌ Usuario  no registrado, presione el botón Register </p>
+      <button class="ok" onclick="cerrarMensaje()">Cerrar</button>
+    </div>
+  </div>
+
+<script>
+    mostrarMensaje=()=> {
+    document.getElementById('miModal').style.display = 'block';
+    }
+    cerrarMensaje=()=> {
+    document.getElementById('miModal').style.display = 'none';
+    }
+
+</script>
+</body>
+</html>
