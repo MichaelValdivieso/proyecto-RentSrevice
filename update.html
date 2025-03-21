@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="esp">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href=".">
+  <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+  <link rel="stylesheet" href="./Css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentService</title>
+</head>
+
+<body>
+  <div class="encabezado">
+    <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
+    <div class="opciones">
+      <div class="saludo "> 
+        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
+        <div class="userHello">Hello</div>
+        <div class="userName" id="userActivo">jjjj</div>
+      </div>
+      <div class="menu ">
+        <div class="opMenu" id="home">Home</div>
+        <div class="opMenu1">Profile Update</div>
+        <div class="opMenu" id="logOut">Log out</div>
+      </div>
+    </div>
+  </div>
+  <div class="formulario" >
+    <div class="formTitulo">Profile Update</div>
+    <div class="formDiv" id="formDiv">
+      <div class="text"  >Email:</div>
+      <div><input class="textArea" type="text" name="" id="email"  ></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Password:</div>
+      <div><input class="textArea" type="text" name="" id="password" ></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">First Name:</div>
+      <div><input class="textArea" type="text" name="" id="firstName" min="0" ></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Last Name:</div>
+      <div><input class="textArea" type="text" name="" id="lastName" min="0"  ></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Birth Date:</div>
+      <div ><input class="textAreaD" type="date" name="" id="date" ></div>
+    </div>
+    <div class="formDiv">
+      <!-- <div class="btnCancel" id="btnCancel">Cancel</div> -->
+
+      <div class=" btnAceptar1" id="btnSaveUp"> Update
+       <!-- <button  onclick="update()">guardar</button>  -->
+      </div>
+    </div>
+  </div>
+
+  <div id="miModal" class="modal">
+    <div class="modal-content">
+      <p>✅ ¡Los cambios se han guardado con éxito!</p>
+      <button class="ok" onclick="cerrarMensaje()">Cerrar</button>
+    </div>
+  </div>
+
+<div id="miModalOut" class="modal">
+  <div class="modal-content">
+    <p>✅ ¡Sesion cerrada!</p>
+    <button class="ok" onclick="cerrarMensajeOut()">Cerrar</button>
+  </div>
+</div>
+
+<div id="miModalTime" class="modal">
+  <div class="modal-content">
+    <p>❌¡Tiempo expirado cerrando sesion!</p>
+    <button class="cerrar" onclick="cerrarMensajeTime()">Cerrar</button>
+  </div>
+</div>
+
+<script src="update.js"></script>
+
+
+</body>
+
+</html>

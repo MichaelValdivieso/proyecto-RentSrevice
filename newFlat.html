@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="esp">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href=".">
+  <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+  <link rel="stylesheet" href="./Css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentService</title>
+</head>
+
+<body>
+
+  <div class="encabezado">
+    <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
+    <div class="opciones">
+      <div class="saludo "> 
+        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
+        <div class="userHello">Hello</div>
+        <div class="userName" id="userActivo">xxxxxxxxxxx</div>
+      </div>
+      <div class="menu ">
+        <div class="opMenu" id="home">Home</div>
+        <div class="opMenu1">New Flat</div>
+        <div class="opMenu" id="update">Update Profile</div>
+        <div class="opMenu" id="logOut">Log out</div>
+      </div>
+    </div>
+  </div>
+  <div class="formulario" >
+    <div class="formTitulo">New Flat</div>
+    <div class="formDiv" id="formDiv">
+      <div class="text"  >City:</div>
+      <div><input class="textArea" type="text" name="" id="city" oninput="validarTexto(this)" required title="⚠️ Este campo es obligatorio solo acepta texto." ></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Street name:</div>
+      <div><input class="textArea" type="text" name="" id="street" oninput="validarTexto(this)" required title="⚠️ Este campo es obligatorio solo acepta texto."></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Street Number:</div>
+      <div><input class="textArea" type="text" name="" id="number" min="0" oninput="validarNumeros(this)" required title="⚠️ Este campo es obligatorio solo acepta números."></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Area Size:</div>
+      <div><input class="textArea" type="text" name="" id="size" min="0" oninput="validarNumeros(this)" required title="⚠️ Este campo es obligatorio solo acepta números."></div>
+      <div></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Has AC:</div>
+      <div><input class="textArea" type="text" name="" id="ac" oninput="validarTexto(this)" required title="⚠️Este campo es obligatorio solo acepta texto."></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Year built:</div>
+      <div><input class="textArea" type="text" name="" id="year" min="0" oninput="validarNumeros(this)" required title="⚠️ Este campo es obligatorio solo acepta números."></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Rent price:</div>
+      <div><input class="textArea" type="text" name="" id="price" min="0" oninput="validarNumeros(this)" required title="⚠️ Este campo es obligatorio solo acepta números."></div>
+    </div>
+    <div class="formDiv">
+      <div class="text">Date available:</div>
+      <div ><input class="textAreaD" type="date" name="" id="date" ></div>
+    </div>
+    <div class="formDiv">
+      <div class="btnCancel" id="btnCancel">Cancel</div>
+
+      <div class=" btnAceptar" id="btnSave"> Save
+        <!-- <button  onclick="valueInput()">guardar</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div id="miModal" class="modal">
+    <div class="modal-content">
+      <p>✅ ¡Los cambios se han guardado con éxito!</p>
+      <button class="ok" onclick="cerrarMensaje()">Cerrar</button>
+    </div>
+  </div>
+  <div id="miModalError" class="modal">
+    <div class="modal-content">
+      <p>❌¡Error the data is incorrect do not save !</p>
+      <button class="cerrar" onclick="cerrarMensajeError()">Cerrar</button>
+    </div>
+  </div>
+
+  <div id="miModalCancel" class="modal">
+    <div class="modal-content">
+      <p>😞¡Registration canceled !</p>
+      <button class="cerrar" onclick="cerrarMensajeCancel()">Cerrar</button>
+    </div>
+  </div>
+
+  <div id="miModalOut" class="modal">
+    <div class="modal-content">
+      <p>✅ ¡Sesion cerrada!</p>
+      <button class="ok" onclick="cerrarMensajeOut()">Cerrar</button>
+    </div>
+  </div>
+  <div id="miModalTime" class="modal">
+    <div class="modal-content">
+      <p>❌¡Tiempo expirado cerrando sesion!</p>
+      <button class="cerrar" onclick="cerrarMensajeTime()">Cerrar</button>
+    </div>
+  </div>
+
+
+
+
+<script src="newFlat.js"></script>
+
+
+
+</body>
+
+</html>

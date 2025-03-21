@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href=".">
+    <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+    <link rel="stylesheet" href="./Css/styleTable.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentService</title>
+</head>
+
+<body >
+
+    <div class="encabezado">
+        <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
+        <div class="opciones">
+            <div class="saludo ">
+                <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
+                <div class="userHello">Hello</div>
+                <div class="userName" id="userActivo" >xxxxxxxxxxx</div>
+            </div>
+            <div class="menu ">
+                <div class="opMenu1" >Home</div>
+                <div class="opMenu" id="update">Update Profile</div>
+                <div class="opMenu" id="logOut">Log out</div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="filtros">
+
+            <div class="titleFiltro">FILTRAR</div>
+            <div class="filTextC">City:</div>
+            <div class="filAre"><input type="text" class="filterCity" id="filterCity" onkeyup="filtrarTabla()" oninput="validarTexto(this)"></div>
+            <div class="filText">Range Price:</div>
+            <div class="filAre"><select class="box" id="priceRange" onchange="filtrarTabla()">
+                    <option value="">Todos</option>
+                    <option value="0-100">0 - 100</option>
+                    <option value="101-200">101 - 200</option>
+                    <option value="200>">Mayor a 200</option>
+                </select></div>
+            <div class="filText">Range Size:</div>
+            <div class="filAre">
+                <select class="box" id="sizeRange" onchange="filtrarTabla()">
+                    <option value="">Todos</option>
+                    <option value="0-200">0 - 200</option>
+                    <option value="201-500">201 - 500</option>
+                    <option value="500>">Mayor a 500</option>
+                </select>
+            </div>
+            <div class="filText">Favorites:</div>
+            <div class="filAre"><input type="checkbox" id="showFavorites" onchange="filtrarTabla()"></div>
+
+        </div>
+        <div class="NewFlats" id="btnNewFlat"> <img src="./Img/mas.png" class="imgNF" id="btnNewFlat">New Flat</div>
+        <div class="tableF">
+            <table class="flatTable" id="propertyTable">
+                <thead>
+                    <tr>
+                        <th onclick="ordenarTabla('City')">CITY ↑↓­</th>
+                        <th>STREET</th>
+                        <th>STREET NUMBER</th>
+                        <th onclick="ordenarTabla('AreaSize')">AREA SIZE ↑↓</th>
+                        <th>HAS AC</th>
+                        <th>YEAR BUILT</th>
+                        <th onclick="ordenarTabla('RentPrice')">RENT PRICE ↑↓</th>
+                        <th>DATE AVAILABLE</th>
+                        <th>FAVORITE</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="miModalOut" class="modal">
+        <div class="modal-content">
+            <p>✅ ¡Sesion cerrada!</p>
+            <button class="ok" onclick="cerrarMensajeOut()">Cerrar</button>
+        </div>
+    </div>
+    <div id="miModalTime" class="modal">
+        <div class="modal-content">
+            <p>❌¡Tiempo expirado cerrando sesion!</p>
+            <button class="cerrar" onclick="cerrarMensajeTime()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="home.js">
+
+        
+    </script>
+    
+    

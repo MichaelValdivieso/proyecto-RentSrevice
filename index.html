@@ -1,76 +1,77 @@
-<!doctype html>
-<html lang="esp">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href=".">
-  <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
-  <link rel="stylesheet" href="./Css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RentService</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href=".">
+    <link rel="icon" type="image/svg+xml" href="./public/Logo.svg" />
+    <link rel="stylesheet" href="./Css/styleIndex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentService</title>
 </head>
 
-<body>
-
-  <div class="encabezado">
+<body onload="checkSession()">
+<div class="encabezado">
     <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
     <div class="opciones">
-      <div class="saludo "> 
-        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
-        <div class="userHello">Hello</div>
-        <div class="userName">xxxxxxxxxxx</div>
-      </div>
-      <div class="menu ">
-        <div class="opMenu">Home</div>
-        <div class="opMenu"><a href="./tablas.html">All Flats</a></div>
-        <div class="opMenu">New Flat</div>
-        <div class="opMenu">Update Profile</div>
-        <div class="opMenu">Log out</div>
-      </div>
+        <div class="saludo ">
+            <!-- <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div> -->
+            <div class="userHello"></div>
+            <div class="userName" id="userActivo"></div>
+        </div>
+        <div class="menu ">
+            <div class="opMenu" id="home"></div>
+            <div class="opMenu1"></div>
+            <div class="opMenu"></div>
+        </div>
     </div>
-  </div>
-  <div class="formulario">
-    <div class="formTitulo">New Flat</div>
-    <div class="formDiv">
-      <div class="text">City:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
-    </div>
-    <div class="formDiv">
-      <div class="text">Street name:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
+</div>
+<div class="formulario">
+    <div class="formTitulo">Login</div>
+  
+    <div class="formDiv" id="formDiv">
+        <div class="text">Email:</div>
+        <div><input class="textArea" type="text" name="" id="loginEmail"></div>
     </div>
     <div class="formDiv">
-      <div class="text">Street Number:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
+        <div class="text">Password:</div>
+        <div><input class="textArea" type="password" name="" id="loginPassword"></div>
     </div>
+   
     <div class="formDiv">
-      <div class="text">Area Size:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
-      <div></div>
+ 
+
+        <div class=" btnAceptar" id="btnIngreso"> Sign in 
+          
+        </div>
     </div>
-    <div class="formDiv">
-      <div class="text">Has AC:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
-    </div>
-    <div class="formDiv">
-      <div class="text">Year built:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
-    </div>
-    <div class="formDiv">
-      <div class="text">Rent price:</div>
-      <div><input class="textArea" type="text" name="" id=""></div>
-    </div>
-    <div class="formDiv">
-      <div class="text">Date available:</div>
-      <div ><input class="textArea" type="text" name="" id=""></div>
-    </div>
-    <div class="formDiv">
-      <div class="btnCancel">Cancel</div>
-      <div class=" btnAceptar">Save</div>
-    </div>
-  </div>
+    <div class="pie"> ¿No tienes cuenta? <a href="registro.html">Registrate</a> </div>
+</div>
 
 
+
+<div id="miModalOut" class="modal">
+    <div class="modal-content">
+        <p>✅ ¡Sesion cerrada!</p>
+        <button class="ok" onclick="cerrarMensajeOut()">Cerrar</button>
+    </div>
+</div>
+<div id="miModalNoInicio" class="modal">
+    <div class="modal-content">
+        <p>❌¡Email o contraseña incorrectos!</p>
+        <button class="cerrar" onclick="cerrarMensajeNoInicio()">Cerrar</button>
+    </div>
+</div>
+
+<div id="miModalTime" class="modal">
+    <div class="modal-content">
+        <p>❌¡Tiempo expirado cerrando sesion!</p>
+        <button class="cerrar" onclick="cerrarMensajeTime()">Cerrar</button>
+    </div>
+</div>
+
+
+<script src="./index.js"></script>
 </body>
 
 </html>
