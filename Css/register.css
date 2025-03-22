@@ -9,7 +9,7 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: calc(20vh);
+  height: calc(15vh);
   background: linear-gradient(to right,#48037A, #9D3F01);
   /* border: solid 2px red; */
 }
@@ -22,81 +22,9 @@ margin: 0;
 }
 
 .imgLogo {
-  width: 160px;
+  width: 150px;
   height: 100%;
   border-radius: 20px;
-}
-
-.opciones {
-  width: 88%;
-  height: 60%;
-  margin-top: 3%;
-  margin-left: 1%;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-  /* border: solid 2px green; */
-}
-
-.saludo {
-  width: 20%;
-  height: 50%;
-  margin-left: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  text-align: center;
-  display: none;
-  /* border: solid 2px green; */
-}
-.userIcon{
-  width: 15%;
-  height: 100%;
-  /* border: solid 1px white; */
-}
-.imgUser{
-  margin-top: 7px;
-  width: auto;
-}
-.userHello {
-  width: 15%;
-  height: 100%;
-  align-content: center;
-  text-align: center;
-  /* border: solid 1px white; */
-}
-.userName{
-  width: 60%;
-  height: 100%;
-  align-content: center;
-  text-align: center;
-  /* border: solid 1px white; */
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 7px;
-  width: 100%;
-  height: 50%;
-  display: table;
-  display: none;
-  /* border: solid 2px brown; */
-}
-
-.opMenu {
-  width: 17%;
-  margin-left: 5%;
-  height: 80%;
-  margin-top: 1%;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  /* border: solid 1px yellow; */
-}
-.opMenu:hover {
-  color: #f39c12;
 }
 
 .formulario {
@@ -104,7 +32,7 @@ margin: 0;
   flex-wrap: wrap;
   width: 30%;
   height: cal(30vh);
-  margin-top: 30px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -146,7 +74,7 @@ margin: 0;
 }
 
 .textArea {
-  width: 140%;
+  width: 130%;
   height: 90%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -156,12 +84,10 @@ margin: 0;
 }
 
 .btnRegister{
-  /* width: 25%; orig */
   width: 120%;
   height: calc(5vh);
-  /* margin-left: 15%; orig */
   margin-left: 60%;
-  background: #1cb15a;
+  background: #4da371;
   color: white;
   border-radius: 5px;
   align-content: center;
@@ -171,7 +97,7 @@ margin: 0;
 }
 
 .btnRegister:hover {
-  background: #2ecc71;
+  background: #1e879c;
 }
 
 .btnCancel {
@@ -187,10 +113,11 @@ margin: 0;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btnCancel:hover {
-  background: #c0392b;
+  background: #c15b50;
 }
 
 .modal {
@@ -228,6 +155,15 @@ margin: 0;
   background-color: #c9302c;
 }
 
+.ok {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 /* @media para Tablets de baja resolución
 481px a 767px */
 @media (min-width: 481px) and (max-width: 767px) {
@@ -248,7 +184,7 @@ margin: 0;
   }
 
   .imgLogo {
-    width: 120px;
+    width: 110px;
     height: 100%;
     border-radius: 20px;
   }
@@ -325,10 +261,8 @@ margin: 0;
 }
 
 .btnCancel {
-  /* width: 25%; orig */
   width: 120%;
   height: calc(5vh);
-  /* margin-left: 20%; orig */
   margin-left: 120%;
   background: #e74c3c;
   color: white;
@@ -357,7 +291,7 @@ margin: 0;
 }
 
 .logo {
-  width: 10%;
+  width: 5%;
   height: 100%;
   margin-left: 10px;
   /* border: solid 2px black; */
@@ -436,10 +370,6 @@ margin: 0;
   text-decoration: none;
 }
 
-.btnRegister:hover {
-  background: #2ecc71;
-}
-
 .btnCancel {
   width: 40%;
   height: calc(5vh);
@@ -454,7 +384,4 @@ margin: 0;
   text-decoration: none;
 }
 
-.btnCancel:hover {
-  background: #c0392b;
-}
 }

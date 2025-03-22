@@ -14,23 +14,8 @@
 <body>
   <!-- 
   // REGISTER -->
-
   <div class="encabezado">
     <div class="logo"><img class="imgLogo" src="./Img/Logo.jpg" alt=""></div>
-    <div class="opciones">
-      <div class="saludo ">
-        <div class="userIcon"><img class="imgUser" src="./Img/user.png" alt=""></div>
-        <div class="userHello">Hello</div>
-        <div class="userName">xxxxxxxxxxx</div>
-      </div>
-      <div class="menu">
-        <div class="opMenu">Home</div>
-        <div class="opMenu">All Flats</div>
-        <div class="opMenu">New Flat</div>
-        <div class="opMenu">Update Profile</div>
-        <div class="opMenu">Log out</div>
-      </div>
-    </div>
   </div>
 
   <div class="formulario">
@@ -65,26 +50,37 @@
     </div>
   </div>
 
-  <!-- Caja modal - Usuario registrado -->
-  <!-- <button class="ok" onclick="mostrarMensaje1()">Mostrar</button> -->
+  
+
+  <!-- Caja modal 1 -  No cumple la edad permitida (18-120 años)  -->
+  <!-- <button onclick="mostrarMensaje1()">Mostrar</button>  -->
   <div id="miModal1" class="modal">
     <div class="modal-content">
-      <p>✅ Datos correctos, usuario registrado</p>
-      <button class="ok" onclick="cerrarMensaje1()">Cerrar</button>
+      <p>❌  No cumple la edad permitida (18-120 años)</p>
+      <button class="cerrar" onclick="cerrarMensaje1()">Cerrar</button>
     </div>
-  </div>  
+  </div>
 
-  <!-- Caja modal - datos incompletos -->
-  <!-- <button class="ok" onclick="mostrarMensaje2()">Mostrar</button>  -->
+  <!-- Caja modal 2 - Usuario registrado -->
+  <!-- <button onclick="mostrarMensaje2()">Mostrar</button> -->
   <div id="miModal2" class="modal">
     <div class="modal-content">
-      <p>❌ Datos incompletos </p>
-      <button class="ok" onclick="cerrarMensaje2()">Cerrar</button>
+      <p>✅ Datos correctos, usuario registrado
+       Realice su ingreso por la pantalla de LOGIN</p>
+      <button class="cerrar" onclick="cerrarMensaje2()">Cerrar</button>
+    </div>
+  </div> 
+  
+  <!-- Caja modal 3 - Datos incompletos, digite nuevamente-->
+  <!-- <button onclick="mostrarMensaje3()">Mostrar</button>  -->
+  <div id="miModal3" class="modal">
+    <div class="modal-content">
+      <p>❌ Datos incompletos, digite nuevamente </p>
+      <button class="cerrar" onclick="cerrarMensaje3()">Cerrar</button>
     </div>
   </div>
 
   <script type="module" src="./src/validar-register.js"></script>
 
 </body>
-
 </html>
